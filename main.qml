@@ -3,129 +3,37 @@ import QtQuick.Window 2.15
 import QtQuick.Controls 2.15
 
 Window {
+    id:mainScreen
     width: 640
     height: 480
     visible: true
-    title: qsTr("Hidrofor Hesabı")
-
-    Label {
-        id: aileSayisiLabel
-        x: 50
-        y: 120
-        width: 270
-        height: 30
-        text: qsTr("A ... Aile Sayısı")
-        horizontalAlignment: Text.AlignLeft
-        verticalAlignment: Text.AlignVCenter
-    }
-
-    Label {
-        id: bireySayisiLabel
-        x: 50
-        y: 156
-        width: 270
-        height: 30
-        text: qsTr("B ... Birey Sayısı")
-        verticalAlignment: Text.AlignVCenter
-    }
-
-    Label {
-        id: suTuketimiLabel
-        x: 50
-        y: 192
-        width: 270
-        height: 30
-        text: qsTr("T ... Bireyin Ortalama Günlük Su Tüketimi")
-        verticalAlignment: Text.AlignVCenter
-    }
-
-    Label {
-        id: kullanimFaktoruLabel
-        x: 50
-        y: 228
-        width: 270
-        height: 30
-        text: qsTr("F ... Eş Zaman Kullanım Faktörü")
-        verticalAlignment: Text.AlignVCenter
-    }
-
-    Label {
-        id: formulLabel
-        x: 50
-        y: 83
-        width: 270
-        height: 16
-        text: qsTr("HİDROFOR DEBİSİ (m³/h) = Q = A x B x T x f")
-    }
-
-    TextField {
-        id: aDegeri
-        x: 370
-        y: 120
-        width: 170
-        height: 30
-        horizontalAlignment: Text.AlignRight
-        placeholderText: qsTr("Değer Giriniz ... (A)")
-        validator: RegExpValidator { regExp: /[0-9A-F]+/ }
-    }
-
-    TextField {
-        id: bDegeri
-        x: 370
-        y: 156
-        width: 170
-        height: 30
-        horizontalAlignment: Text.AlignRight
-        placeholderText: qsTr("Değer Giriniz ... (B)")
-        validator: RegExpValidator { regExp: /[0-9A-F]+/ }
-    }
-
-    TextField {
-        id: tDegeri
-        x: 370
-        y: 192
-        width: 170
-        height: 30
-        horizontalAlignment: Text.AlignRight
-        placeholderText: qsTr("Değer Giriniz ... (T)")
-        validator: RegExpValidator { regExp: /[0-9A-F]+/ }
-    }
-
-    TextField {
-        id: fDegeri
-        x: 370
-        y: 228
-        width: 170
-        height: 30
-        horizontalAlignment: Text.AlignRight
-        placeholderText: qsTr("Değer Giriniz ... (f)")
-    }
+    title: qsTr("Welcome Screen")
 
     Button {
-        id: hesaplaButon
-        x: 370
-        y: 288
-        width: 170
-        height: 30
-        text: qsTr("Hesapla")
+        id: hidroforButonu
+        x: 50
+        y: 354
+        width: 245
+        height: 40
+        text: qsTr("Hidrofor Hesabı için Tıklayınız")
         onClicked: {
-            h1.aDegeri = aDegeri.text
-            h1.bDegeri = bDegeri.text
-            h1.tDegeri = tDegeri.text
-            h1.fDegeri = fDegeri.text
-            h1.hidroforHesap()
-            sonucLabel.text = "HİDROFOR DEBİSİ (m³/h) = " + h1.sonucDegeriText + " m³/h"
+            var component = Qt.createComponent("hidrofor.qml")
+            var window    = component.createObject()
+            window.show()
         }
     }
 
-    Label {
-        id: sonucLabel
-        x: 304
-        y: 337
-        width: 236
-        height: 30
-        text: qsTr("HİDROFOR DEBİSİ (m³/h)")
-        horizontalAlignment: Text.AlignRight
-        verticalAlignment: Text.AlignVCenter
+    Button {
+        id: hidroforButonu1
+        x: 345
+        y: 354
+        width: 245
+        height: 40
+        text: qsTr("Genleşme Tankı Seçimi için Tıklayınız")
+        onClicked: {
+            var component = Qt.createComponent("genlesmeTanki.qml")
+            var window    = component.createObject()
+            window.show()
+        }
     }
 }
