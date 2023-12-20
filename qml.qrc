@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/">
+        <file>hidrofor.qml</file>
         <file>main.qml</file>
+        <file>genlesmeTanki.qml</file>
     </qresource>
 </RCC>

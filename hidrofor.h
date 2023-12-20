@@ -12,6 +12,7 @@ class hidrofor : public QObject
     Q_PROPERTY(double tDegeri READ tDegeriText WRITE tDegeriSet NOTIFY tDegeriChanged)
     Q_PROPERTY(double fDegeri READ fDegeriText WRITE fDegeriSet NOTIFY fDegeriChanged)
     Q_PROPERTY(QString sonucDegeriText READ sonucDegeriText WRITE sonucDegeriSet NOTIFY sonucDegeriChanged)
+
 public:
     explicit hidrofor(QObject *parent = nullptr);
 
@@ -75,6 +76,8 @@ public:
         qDebug() << "send resultText data is:" << QString::number(sonucDegeri);
     }
 
+    double sonucDegeri;
+
 signals:
     void aDegeriChanged(const double & aDegeri);
     void bDegeriChanged(const double & bDegeri);
@@ -86,7 +89,7 @@ public slots:
     void hidroforHesap();
 
 private:
-    double aDegeri, bDegeri, tDegeri, fDegeri, sonucDegeri;
+    double aDegeri, bDegeri, tDegeri, fDegeri;
 
 };
 
