@@ -137,4 +137,17 @@ Window {
         horizontalAlignment: Text.AlignRight
         verticalAlignment: Text.AlignVCenter
     }
+
+    Button {
+        id: debiGetirButon
+        x: 546
+        y: 120
+        width: 37
+        height: 30
+        text: qsTr("<=")
+        onClicked: {
+            genlesme.genlesmeTankiHesap()
+            debiDegeri.text = genlesme.debiDegeri
+        }
+    }
 }
