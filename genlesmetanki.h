@@ -3,7 +3,6 @@
 
 #include <QDebug>
 #include <QObject>
-#include "hidrofor.h"
 
 class genlesmeTanki : public QObject
 {
@@ -17,8 +16,6 @@ class genlesmeTanki : public QObject
 
 public:
     explicit genlesmeTanki(QObject *parent = nullptr);
-
-    hidrofor hidroClass;
 
     double debiDegeriText() const{
         return debiDegeri;
