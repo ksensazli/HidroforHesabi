@@ -3,7 +3,6 @@ import QtQuick.Window 2.15
 import QtQuick.Controls 2.15
 
 Window {
-    id:mainScreen
     width: 640
     height: 480
     visible: true
@@ -12,8 +11,8 @@ Window {
     Button {
         id: hidroforButonu
         x: 50
-        y: 354
-        width: 245
+        y: 220
+        width: 260
         height: 40
         text: qsTr("Hidrofor Hesabı için Tıklayınız")
         onClicked: {
@@ -21,17 +20,32 @@ Window {
             var window    = component.createObject()
             window.show()
         }
+
     }
 
     Button {
-        id: hidroforButonu1
-        x: 345
-        y: 354
-        width: 245
+        id: genlesmeTankiButonu
+        x: 50
+        y: 280
+        width: 260
         height: 40
         text: qsTr("Genleşme Tankı Seçimi için Tıklayınız")
         onClicked: {
             var component = Qt.createComponent("genlesmeTanki.qml")
+            var window    = component.createObject()
+            window.show()
+        }
+    }
+
+    Button {
+        id: boylerKapasiteButonu
+        x: 50
+        y: 340
+        width: 260
+        height: 40
+        text: qsTr("Boyler Kapasitesi Hesabı İçin Tıklayınız")
+        onClicked: {
+            var component = Qt.createComponent("boyler.qml")
             var window    = component.createObject()
             window.show()
         }
