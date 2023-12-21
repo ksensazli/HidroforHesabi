@@ -145,6 +145,8 @@ Window {
         width: 37
         height: 30
         text: qsTr("<=")
+        ToolTip.visible: down
+        ToolTip.text: qsTr("Hidrofor'da hesaplanan debiyi kopyalamak için tıkla!")
         onClicked: {
             genlesme.genlesmeTankiHesap()
             debiDegeri.text = genlesme.debiDegeri
