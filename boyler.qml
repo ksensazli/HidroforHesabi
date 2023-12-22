@@ -7,7 +7,6 @@ Window {
     width: 640
     height: 640
     visible: true
-    color: "#a7acfaff"
     title: qsTr("Boyler Kapasitesi Hesap")
 
     ComboBox {
