@@ -274,6 +274,7 @@ Window {
             boyler.camasirMakinasiSayisi = camasirMakinasiText.text
             boyler.bulasikMakinasiSayisi = bulasikMakinasiText.text
             boyler.boylerHesap()
+            //--------------------------------------------------------//
             ozelLavaboSonucLabel.text = String(boyler.ozelLavaboSayisi)
             genelLavaboSonucLabel.text = String(boyler.genelLavaboSayisi)
             banyoSonucLabel.text = String(boyler.banyoSayisi)
