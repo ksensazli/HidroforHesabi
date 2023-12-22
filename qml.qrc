@@ -4,5 +4,6 @@
         <file>main.qml</file>
         <file>genlesmeTanki.qml</file>
         <file>boyler.qml</file>
+        <file>pisSuPompasi.qml</file>
     </qresource>
 </RCC>
