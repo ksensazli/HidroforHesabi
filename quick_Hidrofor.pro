@@ -10,7 +10,8 @@ SOURCES += \
         boylerkapasitesi.cpp \
         genlesmetanki.cpp \
         hidrofor.cpp \
-        main.cpp
+        main.cpp \
+        pissupompasi.cpp
 
 RESOURCES += qml.qrc
 
@@ -28,4 +29,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 HEADERS += \
     boylerkapasitesi.h \
     genlesmetanki.h \
-    hidrofor.h
+    hidrofor.h \
+    pissupompasi.h
