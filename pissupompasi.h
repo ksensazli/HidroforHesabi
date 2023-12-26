@@ -13,7 +13,6 @@ signals:
 
 public slots:
     void toplamaHesap();
-    void debiHesap();
 
 private:
     double lavaboBSEN = 0.3;

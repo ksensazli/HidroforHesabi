@@ -5,7 +5,7 @@ pisSuPompasi::pisSuPompasi(QObject *parent) : QObject{parent}
 
 }
 
-void pisSuPompasi::toplamHesap()
+void pisSuPompasi::toplamaHesap()
 {
     lavaboPisSu = lavaboBSEN * lavaboSayisi;
     bidePisSu = bideBSEN * bideSayisi;
