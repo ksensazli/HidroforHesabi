@@ -610,7 +610,7 @@ Window {
         onClicked: {
             pisSu.setAralikliKullanim()
             pisSuDebisiSonucLabel.text = String(pisSu.toplamPisSu.toFixed(1))
-            kullanimKatsayisiSonucLabel.text = String(pisSu.katSayi)
+            kullanimKatsayisiSonucLabel.text = "0.5"
             emniyetliPompaYuzdeOnSonucLabel.text = String(pisSu.emniyetliYuzdeOn.toFixed(1))
             emniyetliPompaSonucLabel.text = String(pisSu.emniyetli.toFixed(1))
             basincKaybiSonucLabel.text = String(pisSu.basincKaybi)
@@ -627,7 +627,7 @@ Window {
         onClicked: {
             pisSu.setSikKullanim()
             pisSuDebisiSonucLabel.text = String(pisSu.toplamPisSu.toFixed(1))
-            kullanimKatsayisiSonucLabel.text = String(pisSu.katSayi)
+            kullanimKatsayisiSonucLabel.text = "0.7"
             emniyetliPompaYuzdeOnSonucLabel.text = String(pisSu.emniyetliYuzdeOn.toFixed(1))
             emniyetliPompaSonucLabel.text = String(pisSu.emniyetli.toFixed(1))
             basincKaybiSonucLabel.text = String(pisSu.basincKaybi)
@@ -645,7 +645,7 @@ Window {
         onClicked: {
             pisSu.setYogunKullanim()
             pisSuDebisiSonucLabel.text = String(pisSu.toplamPisSu.toFixed(1))
-            kullanimKatsayisiSonucLabel.text = String(pisSu.katSayi)
+            kullanimKatsayisiSonucLabel.text = "1.0"
             emniyetliPompaYuzdeOnSonucLabel.text = String(pisSu.emniyetliYuzdeOn.toFixed(1))
             emniyetliPompaSonucLabel.text = String(pisSu.emniyetli.toFixed(1))
             basincKaybiSonucLabel.text = String(pisSu.basincKaybi)
@@ -662,7 +662,7 @@ Window {
         onClicked: {
             pisSu.setOzelKullanim()
             pisSuDebisiSonucLabel.text = String(pisSu.toplamPisSu.toFixed(1))
-            kullanimKatsayisiSonucLabel.text = String(pisSu.katSayi)
+            kullanimKatsayisiSonucLabel.text = "1.2"
             emniyetliPompaYuzdeOnSonucLabel.text = String(pisSu.emniyetliYuzdeOn.toFixed(1))
             emniyetliPompaSonucLabel.text = String(pisSu.emniyetli.toFixed(1))
             basincKaybiSonucLabel.text = String(pisSu.basincKaybi)

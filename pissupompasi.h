@@ -27,7 +27,6 @@ public:
     Q_PROPERTY(double yerSuzgeci100PisSu READ yerSuzgeci100PisSuText WRITE yerSuzgeci100PisSuSet NOTIFY yerSuzgeci100PisSuChanged)
     Q_PROPERTY(double toplam READ toplamText WRITE toplamSet NOTIFY toplamChanged)
     Q_PROPERTY(double toplamPisSu READ toplamPisSuText WRITE toplamPisSuSet NOTIFY toplamPisSuChanged)
-    Q_PROPERTY(double katSayi READ katSayiText WRITE katSayiSet NOTIFY katSayiChanged)
     Q_PROPERTY(double emniyetliYuzdeOn READ emniyetliYuzdeOnText WRITE emniyetliYuzdeOnSet NOTIFY emniyetliYuzdeOnChanged)
     Q_PROPERTY(double emniyetli READ emniyetliText WRITE emniyetliSet NOTIFY emniyetliChanged)
     Q_PROPERTY(double basincKaybi READ basincKaybiText WRITE basincKaybiSet NOTIFY basincKaybiChanged)
@@ -84,10 +83,6 @@ public:
 
     double toplamPisSuText() const{
         return toplamPisSu;
-    }
-
-    double katSayiText() const{
-        return katSayi;
     }
 
     double emniyetliYuzdeOnText() const{
@@ -193,13 +188,6 @@ public:
         emit toplamPisSuChanged(toplamPisSu);
     }
 
-    void katSayiSet(const double &katSayiText){
-        if(katSayiText == katSayi)
-            return;
-        katSayi = katSayiText;
-        emit katSayiChanged(katSayi);
-    }
-
     void emniyetliYuzdeOnSet(const double &emniyetliYuzdeOnText){
         if(emniyetliYuzdeOnText == emniyetliYuzdeOn)
             return;
@@ -235,7 +223,6 @@ signals:
     void wcPisSuChanged(const double & wcPisSu);
     void yerSuzgeci5070PisSuChanged(const double & yerSuzgeci5070PisSu);
     void yerSuzgeci100PisSuChanged(const double & yerSuzgeci100PisSu);
-    void katSayiChanged(const double & katSayi);
     void emniyetliYuzdeOnChanged(const double & emniyetliYuzdeOn);
     void emniyetliChanged(const double & emniyetli);
     void basincKaybiChanged(const double & basincKaybi);
