@@ -120,6 +120,18 @@ Window {
         height: 30
         horizontalAlignment: Text.AlignRight
         placeholderText: qsTr("Adet Giriniz")
+        onTextChanged: {
+            if(ozelLavaboText.text != "")
+            {
+                boyler.ozelLavaboSayisi = ozelLavaboText.text
+                boyler.boylerHesap()
+                ozelLavaboSonucLabel.text = String(boyler.ozelLavaboSayisi)
+            }
+            else
+            {
+                ozelLavaboSonucLabel.text = ""
+            }
+        }
     }
 
     TextField {
@@ -130,6 +142,18 @@ Window {
         height: 30
         horizontalAlignment: Text.AlignRight
         placeholderText: qsTr("Adet Giriniz")
+        onTextChanged: {
+            if(genelLavaboText.text != "")
+            {
+                boyler.genelLavaboSayisi = genelLavaboText.text
+                boyler.boylerHesap()
+                genelLavaboSonucLabel.text = String(boyler.genelLavaboSayisi)
+            }
+            else
+            {
+                genelLavaboSonucLabel.text = ""
+            }
+        }
     }
 
     TextField {
@@ -140,6 +164,18 @@ Window {
         height: 30
         horizontalAlignment: Text.AlignRight
         placeholderText: qsTr("Adet Giriniz")
+        onTextChanged: {
+            if(banyoText.text != "")
+            {
+                boyler.banyoSayisi = banyoText.text
+                boyler.boylerHesap()
+                banyoSonucLabel.text = String(boyler.banyoSayisi)
+            }
+            else
+            {
+                banyoSonucLabel.text = ""
+            }
+        }
     }
 
     TextField {
@@ -150,6 +186,18 @@ Window {
         height: 30
         horizontalAlignment: Text.AlignRight
         placeholderText: qsTr("Adet Giriniz")
+        onTextChanged: {
+            if(dusText.text != "")
+            {
+                boyler.dusSayisi = dusText.text
+                boyler.boylerHesap()
+                dusSonucLabel.text = String(boyler.dusSayisi)
+            }
+            else
+            {
+                dusSonucLabel.text = ""
+            }
+        }
     }
 
     TextField {
@@ -160,6 +208,18 @@ Window {
         height: 30
         horizontalAlignment: Text.AlignRight
         placeholderText: qsTr("Adet Giriniz")
+        onTextChanged: {
+            if(mutfakEviyesiText.text != "")
+            {
+                boyler.eviyeSayisi = mutfakEviyesiText.text
+                boyler.boylerHesap()
+                mutfakEviyesiSonucLabel.text = String(boyler.eviyeSayisi)
+            }
+            else
+            {
+                mutfakEviyesiSonucLabel.text = ""
+            }
+        }
     }
 
     TextField {
@@ -170,6 +230,18 @@ Window {
         height: 30
         horizontalAlignment: Text.AlignRight
         placeholderText: qsTr("Adet Giriniz")
+        onTextChanged: {
+            if(camasirMakinasiText.text != "")
+            {
+                boyler.camasirMakinasiSayisi = camasirMakinasiText.text
+                boyler.boylerHesap()
+                camasirMakinasiSonucLabel.text = String(boyler.camasirMakinasiSayisi)
+            }
+            else
+            {
+                camasirMakinasiSonucLabel.text = ""
+            }
+        }
     }
 
     TextField {
@@ -180,6 +252,18 @@ Window {
         height: 30
         horizontalAlignment: Text.AlignRight
         placeholderText: qsTr("Adet Giriniz")
+        onTextChanged: {
+            if(bulasikMakinasiText.text != "")
+            {
+                boyler.bulasikMakinasiSayisi = bulasikMakinasiText.text
+                boyler.boylerHesap()
+                bulasikMakinasiSonucLabel.text = String(boyler.bulasikMakinasiSayisi)
+            }
+            else
+            {
+                bulasikMakinasiSonucLabel.text = ""
+            }
+        }
     }
 
     Label {
