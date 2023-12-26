@@ -567,6 +567,9 @@ Window {
         width: 534
         height: 30
         text: qsTr("ARALIKLI KULLANIM (EV, İŞYERİ, MİSAFİRHANE) = 0.5")
+        onClicked: {
+            pisSu.setAralikliKullanim()
+        }
     }
 
     Button {
@@ -576,7 +579,11 @@ Window {
         width: 534
         height: 30
         text: qsTr("SIK KULLANIM (HASTANE, OKUL, RESTORAN, OTEL) = 0.7")
+        onClicked: {
+            pisSu.setSikKullanim()
+        }
     }
+
 
     Button {
         id: yogunKullanimButon
@@ -585,6 +592,9 @@ Window {
         width: 534
         height: 30
         text: qsTr("YOĞUN KULLANIM (UMUMİ TUVALETLER ve/veya DUŞLAR) = 1.0")
+        onClicked: {
+            pisSu.setYogunKullanim()
+        }
     }
 
     Button {
@@ -594,6 +604,9 @@ Window {
         width: 534
         height: 30
         text: qsTr("ÖZEL KULLANIM (LABORATUAR) = 1.2")
+        onClicked: {
+            pisSu.setOzelKullanim()
+        }
     }
 
     Label {

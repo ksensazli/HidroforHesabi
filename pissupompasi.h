@@ -13,6 +13,10 @@ signals:
 
 public slots:
     void toplamaHesap();
+    void setAralikliKullanim();
+    void setSikKullanim();
+    void setYogunKullanim();
+    void setOzelKullanim();
 
 private:
     double lavaboBSEN = 0.3;
@@ -33,7 +37,7 @@ private:
     int toplam;
     double toplamPisSu;
 
-    double aralikliKatSayi, sikKatSayi, yogunKatSayi, ozelKatSayi;
+    double katSayi;
 
     double pisSuDebisi, emniyetliYuzdeOn, emniyetli, basincKaybi;
 };

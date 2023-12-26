@@ -50,4 +50,18 @@ Window {
             window.show()
         }
     }
+
+    Button {
+        id: pisSuButonu
+        x: 50
+        y: 400
+        width: 260
+        height: 40
+        text: qsTr("Pis Su Pompası Hesabı İçin Tıklayınız")
+        onClicked: {
+            var component = Qt.createComponent("pisSuPompasi.qml")
+            var window    = component.createObject()
+            window.show()
+        }
+    }
 }
