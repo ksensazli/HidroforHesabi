@@ -35,16 +35,13 @@ void pisSuPompasi::toplamBulma(const QString& lavaboSayisiText, const QString& b
 
     toplam = (lavaboSayisi + bideSayisi + dusSayisi + pisuarSayisi + banyoSayisi + eviyeSayisi + bulasikMakinasiSayisi + camasirMakinasiSayisi + wcSayisi + yerSuzgeci5070Sayisi + yerSuzgeci100Sayisi);
     toplamPisSu = (lavaboPisSu + bidePisSu + dusPisSu + pisuarPisSu + banyoPisSu + eviyePisSu + bulasikMakinasiPisSu + camasirMakinasiPisSu + wcPisSu + yerSuzgeci5070PisSu + yerSuzgeci100PisSu);
-
-    qDebug() << "toplam =" << toplam;
-    qDebug() << "toplamPisSu =" << toplamPisSu;
 }
 
 void pisSuPompasi::ileriHesap()
 {
     emniyetliYuzdeOn = sqrt(toplamPisSu) * katSayi * 1.1;
     emniyetli = emniyetliYuzdeOn * 3.6;
-    basincKaybi = (int)(toplamPisSu - emniyetli - 0.5);
+    basincKaybi = (int)(toplamPisSu - emniyetli);
 }
 
 void pisSuPompasi::setAralikliKullanim()
