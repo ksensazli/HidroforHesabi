@@ -547,7 +547,6 @@ Window {
         width: 60
         height: 30
         horizontalAlignment: Text.AlignHCenter
-        placeholderText: qsTr("Toplam")
         readOnly: true
     }
 
@@ -558,7 +557,6 @@ Window {
         width: 140
         height: 30
         horizontalAlignment: Text.AlignHCenter
-        placeholderText: qsTr("Toplam Su Miktarı")
         readOnly: true
     }
 
@@ -583,7 +581,7 @@ Window {
             wcSuMiktariText.text = String(pisSu.wcPisSu.toFixed(1))
             yerSuzgeci5070SuMiktariText.text = String(pisSu.yerSuzgeci5070PisSu.toFixed(1))
             yerSuzgeci100SuMiktariText.text = String(pisSu.yerSuzgeci100PisSu.toFixed(1))
-            toplamText.text = String(pisSu.toplam.toFixed(1))
+            toplamText.text = String(pisSu.toplam.toFixed(0))
             toplamSuMiktariText.text = String(pisSu.toplamPisSu.toFixed(1))
         }
     }
