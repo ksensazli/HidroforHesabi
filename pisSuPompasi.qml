@@ -546,6 +546,9 @@ Window {
         width: 534
         height: 30
         text: qsTr("HESAPLA")
+        onClicked: {
+            pisSu.toplamaHesap()
+        }
     }
 
     Label {

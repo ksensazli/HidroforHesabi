@@ -1,6 +1,7 @@
 #ifndef PISSUPOMPASI_H
 #define PISSUPOMPASI_H
 
+#include <QDebug>
 #include <QObject>
 
 class pisSuPompasi : public QObject

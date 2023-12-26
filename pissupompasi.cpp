@@ -21,24 +21,31 @@ void pisSuPompasi::toplamaHesap()
 
     toplam = (lavaboSayisi + bideSayisi + dusSayisi + pisuarSayisi + banyoSayisi + eviyeSayisi + bulasikMakinasiSayisi + camasirMakinasiSayisi + wcSayisi + yerSuzgeci5070Sayisi + yerSuzgeci100Sayisi);
     toplamPisSu = (lavaboPisSu + bidePisSu + dusPisSu + pisuarPisSu + banyoPisSu + eviyePisSu + bulasikMakinasiPisSu + camasirMakinasiPisSu + wcPisSu + yerSuzgeci5070PisSu + yerSuzgeci100PisSu);
+
+    qDebug() << "toplam =" << toplam;
+    qDebug() << "toplamPisSu =" << toplamPisSu;
 }
 
 void pisSuPompasi::setAralikliKullanim()
 {
     katSayi = 0.5;
+    qDebug() << "kat sayı =" << katSayi;
 }
 
 void pisSuPompasi::setSikKullanim()
 {
     katSayi = 0.7;
+    qDebug() << "kat sayı =" << katSayi;
 }
 
 void pisSuPompasi::setYogunKullanim()
 {
     katSayi = 1.0;
+    qDebug() << "kat sayı =" << katSayi;
 }
 
 void pisSuPompasi::setOzelKullanim()
 {
     katSayi = 1.2;
+    qDebug() << "kat sayı =" << katSayi;
 }
