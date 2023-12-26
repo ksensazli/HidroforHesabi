@@ -1,12 +1,13 @@
 import QtQuick 2.15
 import QtQuick.Window 2.15
 import QtQuick.Controls 2.15
+import "components"
 
 Window {
     width: 640
     height: 920
     visible: true
-    title: qsTr("Hidrofor Hesabı")
+    title: qsTr("Pis Su Pompası Hesabı")
 
     Label {
         id: aciklamaLabel
@@ -560,7 +561,7 @@ Window {
         readOnly: true
     }
 
-    Button {
+    CustomButton {
         id: hesaplaButon
         x: 50
         y: 482
@@ -598,7 +599,7 @@ Window {
         font.underline: true
     }
 
-    Button {
+    CustomButton {
         id: aralikliKullanimButon
         x: 50
         y: 554
@@ -615,7 +616,7 @@ Window {
         }
     }
 
-    Button {
+    CustomButton {
         id: sikKullanimButon
         x: 50
         y: 589
@@ -633,7 +634,7 @@ Window {
     }
 
 
-    Button {
+    CustomButton {
         id: yogunKullanimButon
         x: 50
         y: 624
@@ -650,7 +651,7 @@ Window {
         }
     }
 
-    Button {
+    CustomButton {
         id: ozelKullanimButon
         x: 50
         y: 659

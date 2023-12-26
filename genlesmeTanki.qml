@@ -1,6 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Window 2.15
 import QtQuick.Controls 2.15
+import "components"
 
 Window {
     width: 640
@@ -98,7 +99,7 @@ Window {
         placeholderText: qsTr("Değer Giriniz")
     }
 
-    Button {
+    CustomButton {
         id: hesaplaButon
         x: 370
         y: 288
@@ -138,7 +139,7 @@ Window {
         verticalAlignment: Text.AlignVCenter
     }
 
-    Button {
+    CustomButton {
         id: debiGetirButon
         x: 546
         y: 120

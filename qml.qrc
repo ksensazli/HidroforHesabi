@@ -5,5 +5,8 @@
         <file>genlesmeTanki.qml</file>
         <file>boyler.qml</file>
         <file>pisSuPompasi.qml</file>
+        <file>components/CircularProgressBar.qml</file>
+        <file>components/CustomButton.qml</file>
+        <file>components/CustomTextField.qml</file>
     </qresource>
 </RCC>

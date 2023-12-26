@@ -1,6 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Window 2.15
 import QtQuick.Controls 2.15
+import "components"
 
 Window {
     width: 640
@@ -8,7 +9,7 @@ Window {
     visible: true
     title: qsTr("Welcome Screen")
 
-    Button {
+    CustomButton {
         id: hidroforButonu
         x: 50
         y: 220
@@ -23,7 +24,7 @@ Window {
 
     }
 
-    Button {
+    CustomButton {
         id: genlesmeTankiButonu
         x: 50
         y: 280
@@ -37,7 +38,7 @@ Window {
         }
     }
 
-    Button {
+    CustomButton {
         id: boylerKapasiteButonu
         x: 50
         y: 340
@@ -51,7 +52,7 @@ Window {
         }
     }
 
-    Button {
+    CustomButton {
         id: pisSuButonu
         x: 50
         y: 400
