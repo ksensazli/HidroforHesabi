@@ -426,7 +426,9 @@ Window {
         horizontalAlignment: Text.AlignHCenter
         width: 140
         height: 30
+        readOnly: true
     }
+
     TextField {
         id: bideSuMiktariText
         x: 444
@@ -434,7 +436,9 @@ Window {
         horizontalAlignment: Text.AlignHCenter
         width: 140
         height: 30
+        readOnly: true
     }
+
     TextField {
         id: dusSuMiktariText
         x: 444
@@ -442,7 +446,9 @@ Window {
         horizontalAlignment: Text.AlignHCenter
         width: 140
         height: 30
+        readOnly: true
     }
+
     TextField {
         id: pisuarSuMiktariText
         x: 444
@@ -450,7 +456,9 @@ Window {
         horizontalAlignment: Text.AlignHCenter
         width: 140
         height: 30
+        readOnly: true
     }
+
     TextField {
         id: banyoSuMiktariText
         x: 444
@@ -458,7 +466,9 @@ Window {
         horizontalAlignment: Text.AlignHCenter
         width: 140
         height: 30
+        readOnly: true
     }
+
     TextField {
         id: eviyeSuMiktariText
         x: 444
@@ -466,7 +476,9 @@ Window {
         horizontalAlignment: Text.AlignHCenter
         width: 140
         height: 30
+        readOnly: true
     }
+
     TextField {
         id: bulasikMakinasiSuMiktariText
         x: 444
@@ -474,7 +486,9 @@ Window {
         horizontalAlignment: Text.AlignHCenter
         width: 140
         height: 30
+        readOnly: true
     }
+
     TextField {
         id: camasirMakinasiSuMiktariText
         x: 444
@@ -482,7 +496,9 @@ Window {
         horizontalAlignment: Text.AlignHCenter
         width: 140
         height: 30
+        readOnly: true
     }
+
     TextField {
         id: wcSuMiktariText
         x: 444
@@ -490,7 +506,9 @@ Window {
         horizontalAlignment: Text.AlignHCenter
         width: 140
         height: 30
+        readOnly: true
     }
+
     TextField {
         id: yerSuzgeci5070SuMiktariText
         x: 444
@@ -498,7 +516,9 @@ Window {
         horizontalAlignment: Text.AlignHCenter
         width: 140
         height: 30
+        readOnly: true
     }
+
     TextField {
         id: yerSuzgeci100SuMiktariText
         x: 444
@@ -506,6 +526,7 @@ Window {
         horizontalAlignment: Text.AlignHCenter
         width: 140
         height: 30
+        readOnly: true
     }
 
     Label {
@@ -527,6 +548,7 @@ Window {
         height: 30
         horizontalAlignment: Text.AlignHCenter
         placeholderText: qsTr("Toplam")
+        readOnly: true
     }
 
     TextField {
@@ -537,24 +559,39 @@ Window {
         height: 30
         horizontalAlignment: Text.AlignHCenter
         placeholderText: qsTr("Toplam Su Miktarı")
+        readOnly: true
     }
 
     Button {
         id: hesaplaButon
         x: 50
-        y: 660
+        y: 482
         width: 534
         height: 30
         text: qsTr("HESAPLA")
         onClicked: {
-            pisSu.toplamaHesap()
+            pisSu.toplamBulma(lavaboSayiText.text, bideSayiText.text, dusSayiText.text, pisuarSayiText.text, banyoSayiText.text, eviyeSayiText.text, bulasikMakinasiSayiText.text,
+                              camasirMakinasiSayiText.text, wcSayiText.text, yerSuzgeci5070SayiText.text, yerSuzgeci100SayiText.text)
+            lavaboSuMiktariText.text = String(pisSu.lavaboPisSu.toFixed(1))
+            bideSuMiktariText.text = String(pisSu.bidePisSu.toFixed(1))
+            dusSuMiktariText.text = String(pisSu.dusPisSu.toFixed(1))
+            pisuarSuMiktariText.text = String(pisSu.pisuarPisSu.toFixed(1))
+            banyoSuMiktariText.text = String(pisSu.banyoPisSu.toFixed(1))
+            eviyeSuMiktariText.text = String(pisSu.eviyePisSu.toFixed(1))
+            bulasikMakinasiSuMiktariText.text = String(pisSu.bulasikMakinasiPisSu.toFixed(1))
+            camasirMakinasiSuMiktariText.text = String(pisSu.camasirMakinasiPisSu.toFixed(1))
+            wcSuMiktariText.text = String(pisSu.wcPisSu.toFixed(1))
+            yerSuzgeci5070SuMiktariText.text = String(pisSu.yerSuzgeci5070PisSu.toFixed(1))
+            yerSuzgeci100SuMiktariText.text = String(pisSu.yerSuzgeci100PisSu.toFixed(1))
+            toplamText.text = String(pisSu.toplam.toFixed(1))
+            toplamSuMiktariText.text = String(pisSu.toplamPisSu.toFixed(1))
         }
     }
 
     Label {
         id: sihhiTesisatKatsayilariLabel
         x: 50
-        y: 480
+        y: 524
         width: 534
         height: 30
         text: qsTr("SIHHİ TESİSATLARIN KULLANIM KATSAYILARI")
@@ -566,24 +603,34 @@ Window {
     Button {
         id: aralikliKullanimButon
         x: 50
-        y: 510
+        y: 554
         width: 534
         height: 30
         text: qsTr("ARALIKLI KULLANIM (EV, İŞYERİ, MİSAFİRHANE) = 0.5")
         onClicked: {
             pisSu.setAralikliKullanim()
+            pisSuDebisiSonucLabel.text = String(pisSu.toplamPisSu.toFixed(1))
+            kullanimKatsayisiSonucLabel.text = String(pisSu.katSayi)
+            emniyetliPompaYuzdeOnSonucLabel.text = String(pisSu.emniyetliYuzdeOn.toFixed(1))
+            emniyetliPompaSonucLabel.text = String(pisSu.emniyetli.toFixed(1))
+            basincKaybiSonucLabel.text = String(pisSu.basincKaybi)
         }
     }
 
     Button {
         id: sikKullanimButon
         x: 50
-        y: 545
+        y: 589
         width: 534
         height: 30
         text: qsTr("SIK KULLANIM (HASTANE, OKUL, RESTORAN, OTEL) = 0.7")
         onClicked: {
             pisSu.setSikKullanim()
+            pisSuDebisiSonucLabel.text = String(pisSu.toplamPisSu.toFixed(1))
+            kullanimKatsayisiSonucLabel.text = String(pisSu.katSayi)
+            emniyetliPompaYuzdeOnSonucLabel.text = String(pisSu.emniyetliYuzdeOn.toFixed(1))
+            emniyetliPompaSonucLabel.text = String(pisSu.emniyetli.toFixed(1))
+            basincKaybiSonucLabel.text = String(pisSu.basincKaybi)
         }
     }
 
@@ -591,24 +638,34 @@ Window {
     Button {
         id: yogunKullanimButon
         x: 50
-        y: 580
+        y: 624
         width: 534
         height: 30
         text: qsTr("YOĞUN KULLANIM (UMUMİ TUVALETLER ve/veya DUŞLAR) = 1.0")
         onClicked: {
             pisSu.setYogunKullanim()
+            pisSuDebisiSonucLabel.text = String(pisSu.toplamPisSu.toFixed(1))
+            kullanimKatsayisiSonucLabel.text = String(pisSu.katSayi)
+            emniyetliPompaYuzdeOnSonucLabel.text = String(pisSu.emniyetliYuzdeOn.toFixed(1))
+            emniyetliPompaSonucLabel.text = String(pisSu.emniyetli.toFixed(1))
+            basincKaybiSonucLabel.text = String(pisSu.basincKaybi)
         }
     }
 
     Button {
         id: ozelKullanimButon
         x: 50
-        y: 615
+        y: 659
         width: 534
         height: 30
         text: qsTr("ÖZEL KULLANIM (LABORATUAR) = 1.2")
         onClicked: {
             pisSu.setOzelKullanim()
+            pisSuDebisiSonucLabel.text = String(pisSu.toplamPisSu.toFixed(1))
+            kullanimKatsayisiSonucLabel.text = String(pisSu.katSayi)
+            emniyetliPompaYuzdeOnSonucLabel.text = String(pisSu.emniyetliYuzdeOn.toFixed(1))
+            emniyetliPompaSonucLabel.text = String(pisSu.emniyetli.toFixed(1))
+            basincKaybiSonucLabel.text = String(pisSu.basincKaybi)
         }
     }
 
@@ -673,6 +730,7 @@ Window {
         y: 710
         width: 140
         height: 30
+        verticalAlignment: Text.AlignVCenter
     }
 
     Label {
@@ -681,6 +739,7 @@ Window {
         y: 740
         width: 140
         height: 30
+        verticalAlignment: Text.AlignVCenter
     }
 
     Label {
@@ -689,6 +748,7 @@ Window {
         y: 770
         width: 140
         height: 30
+        verticalAlignment: Text.AlignVCenter
     }
 
     Label {
@@ -697,6 +757,7 @@ Window {
         y: 800
         width: 140
         height: 30
+        verticalAlignment: Text.AlignVCenter
     }
 
     Label {
@@ -705,5 +766,6 @@ Window {
         y: 830
         width: 140
         height: 30
+        verticalAlignment: Text.AlignVCenter
     }
 }
