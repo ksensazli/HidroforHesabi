@@ -12,5 +12,4 @@ void hidrofor::hidroforHesap()
     sonucDegeri = aDegeri * bDegeri * tDegeri * fDegeri / 1000;
     qDebug() << "sonucDegeri is:" << sonucDegeri;
     sonucDeger = sonucDegeri;
-    //qDebug() << "Aktarılacak veri:" << sonucDeger;
 }
