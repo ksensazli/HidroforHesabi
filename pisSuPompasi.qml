@@ -8,6 +8,7 @@ Window {
     height: 920
     visible: true
     title: qsTr("Pis Su Pompası Hesabı")
+    color: "#484d58"
 
     Label {
         id: aciklamaLabel
@@ -15,6 +16,7 @@ Window {
         y: 54
         width: 150
         height: 30
+        color: "#ffffff"
         text: qsTr("AÇIKLAMA")
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
@@ -63,6 +65,7 @@ Window {
         y: 100
         width: 150
         height: 30
+        color: "#ffffff"
         text: qsTr("Lavabo")
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
@@ -74,6 +77,7 @@ Window {
         y: 130
         width: 150
         height: 30
+        color: "#ffffff"
         text: qsTr("Bide")
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
@@ -85,6 +89,7 @@ Window {
         y: 160
         width: 150
         height: 30
+        color: "#ffffff"
         text: qsTr("Duş")
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
@@ -96,6 +101,7 @@ Window {
         y: 190
         width: 150
         height: 30
+        color: "#ffffff"
         text: qsTr("Pisuar")
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
@@ -107,6 +113,7 @@ Window {
         y: 220
         width: 150
         height: 30
+        color: "#ffffff"
         text: qsTr("Banyo")
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
@@ -118,6 +125,7 @@ Window {
         y: 250
         width: 150
         height: 30
+        color: "#ffffff"
         text: qsTr("Eviye")
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
@@ -129,6 +137,7 @@ Window {
         y: 280
         width: 150
         height: 30
+        color: "#ffffff"
         text: qsTr("Bulaşık Makinası")
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
@@ -140,6 +149,7 @@ Window {
         y: 310
         width: 150
         height: 30
+        color: "#ffffff"
         text: qsTr("Çamaşır Makinası")
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
@@ -151,6 +161,7 @@ Window {
         y: 340
         width: 150
         height: 30
+        color: "#ffffff"
         text: qsTr("6 lt Su Hazneli WC")
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
@@ -162,6 +173,7 @@ Window {
         y: 370
         width: 150
         height: 30
+        color: "#ffffff"
         text: qsTr("Yer Süzgeci DN50/DN70")
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
@@ -173,12 +185,13 @@ Window {
         y: 400
         width: 150
         height: 30
+        color: "#ffffff"
         text: qsTr("Yer Süzgeci DN100")
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
     }
 
-    TextField {
+    CustomTextField {
         id: lavaboSetKatsayi
         x: 210
         y: 100
@@ -190,7 +203,7 @@ Window {
         readOnly: true
     }
 
-    TextField {
+    CustomTextField {
         id: bideSetKatsayi
         x: 210
         y: 130
@@ -202,7 +215,7 @@ Window {
         readOnly: true
     }
 
-    TextField {
+    CustomTextField {
         id: dusSetKatsayi
         x: 210
         y: 160
@@ -214,7 +227,7 @@ Window {
         readOnly: true
     }
 
-    TextField {
+    CustomTextField {
         id: pisuarSetKatsayi
         x: 210
         y: 190
@@ -226,7 +239,7 @@ Window {
         readOnly: true
     }
 
-    TextField {
+    CustomTextField {
         id: banyoSetKatsayi
         x: 210
         y: 220
@@ -238,7 +251,7 @@ Window {
         readOnly: true
     }
 
-    TextField {
+    CustomTextField {
         id: eviyeSetKatsayi
         x: 210
         y: 250
@@ -250,7 +263,7 @@ Window {
         readOnly: true
     }
 
-    TextField {
+    CustomTextField {
         id: bulasikMakinasiSetKatsayi
         x: 210
         y: 280
@@ -262,7 +275,7 @@ Window {
         readOnly: true
     }
 
-    TextField {
+    CustomTextField {
         id: camasirMakinasiSetKatsayi
         x: 210
         y: 310
@@ -274,7 +287,7 @@ Window {
         readOnly: true
     }
 
-    TextField {
+    CustomTextField {
         id: wcSetKatsayi
         x: 210
         y: 340
@@ -286,7 +299,7 @@ Window {
         readOnly: true
     }
 
-    TextField {
+    CustomTextField {
         id: yerSuzgeci5070SetKatsayi
         x: 210
         y: 370
@@ -298,7 +311,7 @@ Window {
         readOnly: true
     }
 
-    TextField {
+    CustomTextField {
         id: yerSuzgeci100SetKatsayi
         x: 210
         y: 400
@@ -310,7 +323,7 @@ Window {
         readOnly: true
     }
 
-    TextField {
+    CustomTextField {
         id: lavaboSayiText
         x: 367
         y: 100
@@ -320,7 +333,7 @@ Window {
         placeholderText: qsTr("Sayı")
     }
 
-    TextField {
+    CustomTextField {
         id: bideSayiText
         x: 367
         y: 130
@@ -330,7 +343,7 @@ Window {
         placeholderText: qsTr("Sayı")
     }
 
-    TextField {
+    CustomTextField {
         id: dusSayiText
         x: 367
         y: 160
@@ -340,7 +353,7 @@ Window {
         placeholderText: qsTr("Sayı")
     }
 
-    TextField {
+    CustomTextField {
         id: pisuarSayiText
         x: 367
         y: 190
@@ -350,7 +363,7 @@ Window {
         placeholderText: qsTr("Sayı")
     }
 
-    TextField {
+    CustomTextField {
         id: banyoSayiText
         x: 367
         y: 220
@@ -360,7 +373,7 @@ Window {
         placeholderText: qsTr("Sayı")
     }
 
-    TextField {
+    CustomTextField {
         id: eviyeSayiText
         x: 367
         y: 250
@@ -370,7 +383,7 @@ Window {
         placeholderText: qsTr("Sayı")
     }
 
-    TextField {
+    CustomTextField {
         id: bulasikMakinasiSayiText
         x: 367
         y: 280
@@ -380,7 +393,7 @@ Window {
         placeholderText: qsTr("Sayı")
     }
 
-    TextField {
+    CustomTextField {
         id: camasirMakinasiSayiText
         x: 367
         y: 310
@@ -390,7 +403,7 @@ Window {
         placeholderText: qsTr("Sayı")
     }
 
-    TextField {
+    CustomTextField {
         id: wcSayiText
         x: 367
         y: 340
@@ -400,7 +413,7 @@ Window {
         placeholderText: qsTr("Sayı")
     }
 
-    TextField {
+    CustomTextField {
         id: yerSuzgeci5070SayiText
         x: 367
         y: 370
@@ -410,7 +423,7 @@ Window {
         placeholderText: qsTr("Sayı")
     }
 
-    TextField {
+    CustomTextField {
         id: yerSuzgeci100SayiText
         x: 367
         y: 400
@@ -420,7 +433,7 @@ Window {
         placeholderText: qsTr("Sayı")
     }
 
-    TextField {
+    CustomTextField {
         id: lavaboSuMiktariText
         x: 444
         y: 100
@@ -430,7 +443,7 @@ Window {
         readOnly: true
     }
 
-    TextField {
+    CustomTextField {
         id: bideSuMiktariText
         x: 444
         y: 130
@@ -440,7 +453,7 @@ Window {
         readOnly: true
     }
 
-    TextField {
+    CustomTextField {
         id: dusSuMiktariText
         x: 444
         y: 160
@@ -450,7 +463,7 @@ Window {
         readOnly: true
     }
 
-    TextField {
+    CustomTextField {
         id: pisuarSuMiktariText
         x: 444
         y: 190
@@ -460,7 +473,7 @@ Window {
         readOnly: true
     }
 
-    TextField {
+    CustomTextField {
         id: banyoSuMiktariText
         x: 444
         y: 220
@@ -470,7 +483,7 @@ Window {
         readOnly: true
     }
 
-    TextField {
+    CustomTextField {
         id: eviyeSuMiktariText
         x: 444
         y: 250
@@ -480,7 +493,7 @@ Window {
         readOnly: true
     }
 
-    TextField {
+    CustomTextField {
         id: bulasikMakinasiSuMiktariText
         x: 444
         y: 280
@@ -490,7 +503,7 @@ Window {
         readOnly: true
     }
 
-    TextField {
+    CustomTextField {
         id: camasirMakinasiSuMiktariText
         x: 444
         y: 310
@@ -500,7 +513,7 @@ Window {
         readOnly: true
     }
 
-    TextField {
+    CustomTextField {
         id: wcSuMiktariText
         x: 444
         y: 340
@@ -510,7 +523,7 @@ Window {
         readOnly: true
     }
 
-    TextField {
+    CustomTextField {
         id: yerSuzgeci5070SuMiktariText
         x: 444
         y: 370
@@ -520,7 +533,7 @@ Window {
         readOnly: true
     }
 
-    TextField {
+    CustomTextField {
         id: yerSuzgeci100SuMiktariText
         x: 444
         y: 400
@@ -541,7 +554,7 @@ Window {
         verticalAlignment: Text.AlignVCenter
     }
 
-    TextField {
+    CustomTextField {
         id: toplamText
         x: 367
         y: 440
@@ -551,7 +564,7 @@ Window {
         readOnly: true
     }
 
-    TextField {
+    CustomTextField {
         id: toplamSuMiktariText
         x: 444
         y: 440
@@ -593,6 +606,7 @@ Window {
         y: 524
         width: 534
         height: 30
+        color: "#ffffff"
         text: qsTr("SIHHİ TESİSATLARIN KULLANIM KATSAYILARI")
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
@@ -674,6 +688,7 @@ Window {
         y: 710
         width: 240
         height: 30
+        color: "#ffffff"
         text: qsTr("PİS SU DEBİSİ:")
         horizontalAlignment: Text.AlignRight
         verticalAlignment: Text.AlignVCenter
@@ -685,6 +700,7 @@ Window {
         y: 740
         width: 240
         height: 30
+        color: "#ffffff"
         text: qsTr("KULLANIM KATSAYISI:")
         horizontalAlignment: Text.AlignRight
         verticalAlignment: Text.AlignVCenter
@@ -696,6 +712,7 @@ Window {
         y: 770
         width: 325
         height: 30
+        color: "#ffffff"
         text: qsTr("EMNİYETLİ SEÇİLEN PİS SU POMPASI DEBİSİ (%10):")
         horizontalAlignment: Text.AlignRight
         verticalAlignment: Text.AlignVCenter
@@ -707,6 +724,7 @@ Window {
         y: 800
         width: 325
         height: 30
+        color: "#ffffff"
         text: qsTr("EMNİYETLİ SEÇİLEN PİS SU POMPASI DEBİSİ:")
         horizontalAlignment: Text.AlignRight
         verticalAlignment: Text.AlignVCenter
@@ -718,6 +736,7 @@ Window {
         y: 830
         width: 325
         height: 30
+        color: "#ffffff"
         text: qsTr("PİS SU POMPASI BASINÇ KAYBI (mSS):")
         horizontalAlignment: Text.AlignRight
         verticalAlignment: Text.AlignVCenter
@@ -729,6 +748,7 @@ Window {
         y: 710
         width: 140
         height: 30
+        color: "#ffffff"
         verticalAlignment: Text.AlignVCenter
     }
 
@@ -738,6 +758,7 @@ Window {
         y: 740
         width: 140
         height: 30
+        color: "#ffffff"
         verticalAlignment: Text.AlignVCenter
     }
 
@@ -747,6 +768,7 @@ Window {
         y: 770
         width: 140
         height: 30
+        color: "#ffffff"
         verticalAlignment: Text.AlignVCenter
     }
 
@@ -756,6 +778,7 @@ Window {
         y: 800
         width: 140
         height: 30
+        color: "#ffffff"
         verticalAlignment: Text.AlignVCenter
     }
 
@@ -765,6 +788,7 @@ Window {
         y: 830
         width: 140
         height: 30
+        color: "#ffffff"
         verticalAlignment: Text.AlignVCenter
     }
 }

@@ -22,7 +22,6 @@ TextField {
 
     implicitWidth: 300
     implicitHeight: 40
-    placeholderText: qsTr("Type something")
     color: "#ffffff"
     background: Rectangle {
         color: internal.dynamicColor

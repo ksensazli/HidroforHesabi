@@ -7,8 +7,6 @@ boylerKapasitesi::boylerKapasitesi(QObject *parent) : QObject{parent}
 
 void boylerKapasitesi::getIndex()
 {
-    //qDebug() << "index is:" << index;
-
     if(index == "Apartman Dairesi")
     {
         ozelLavaboKatSayisi = 7.5;
@@ -86,9 +84,6 @@ void boylerKapasitesi::getIndex()
         kullanmaKatSayisi = 0.40;
         depolamaKatSayisi = 1;
     }
-
-    //qDebug() << "Kat Sayılar Sırasıyla:" << ozelLavaboKatSayisi << genelLavaboKatSayisi << banyoKatSayisi << dusKatSayisi << eviyeKatSayisi << camasirMakinasiKatSayisi << bulasikMakinasiKatSayisi << kullanmaKatSayisi << depolamaKatSayisi;
-
 }
 
 void boylerKapasitesi::boylerHesap()
@@ -112,11 +107,6 @@ void boylerKapasitesi::boylerHesap()
 
     boylerIsitmaYuku = (isitmaYuku / 860);
     boylerIsitmaYukuInt = (int)(boylerIsitmaYuku + 0.5);
-
-    //qDebug() << "Kullanma Faktörü:" << (int)(kullanmaFaktoru + 0.5);
-    //qDebug() << "Isıtma Yükü:" << (int)(isitmaYuku + 0.5);
-    //qDebug() << "Depolama Faktörü:" << (int)(depolamaFaktoru + 0.5);
-    //qDebug() << "Boyler Isıtma Yükü:" << (int)(boylerIsitmaYuku + 0.5);
 }
 
 
