@@ -415,12 +415,6 @@ Window {
         verticalAlignment: Text.AlignVCenter
     }
 
-    function incrementString(string)
-    {
-           var stringValue = String(parseInt(string));
-           return stringValue;
-    }
-
     CustomButton {
         id: hesaplaButon
         x: 245
